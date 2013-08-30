@@ -13,7 +13,9 @@
         function refreshTweets() {
           $body.html('');
           var index = streams.home.length - 1;
-          while(index >= 0){
+          var noOfTweets = 0;
+
+          while(noOfTweets < 20 && index >= 0){
             var tweet = streams.home[index];
             var $tweet = $('<div></div>');
             $tweet.text('@' + tweet.user + ': ' + tweet.message);
@@ -23,7 +25,9 @@
             var $tweetTime = $('<div></div>');
             $tweetTime.text('Sent:' + tweetTime);
             $tweetTime.appendTo($body);
+            
             index -= 1;
+            noOfTweets ++;
           }
         }
 
