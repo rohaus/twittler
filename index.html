@@ -18,6 +18,11 @@
             var $tweet = $('<div></div>');
             $tweet.text('@' + tweet.user + ': ' + tweet.message);
             $tweet.appendTo($body);
+
+            var tweetTime = tweet.created_at;
+            var $tweetTime = $('<div></div>');
+            $tweetTime.text('Sent:' + tweetTime);
+            $tweetTime.appendTo($body);
             index -= 1;
           }
         }
