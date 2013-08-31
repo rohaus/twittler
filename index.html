@@ -3,48 +3,18 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
-    <style type="text/css">
-
-    </style>
+    <script src="myjavascript.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-
-    <div class="header">
+    <section class="header">
       <h1 class="title">Twittler</h1>
-      <p class="heading">Welcome to Twittler</p>
-      <img src="http://img.pandawhale.com/65458-go-on-without-me-pug-puppy-gif-uVjM.gif"/>
-    </div>
-    <div class="doc"></div>
-
-    <script>
-      $(document).ready(function(){
-
-        function refreshTweets() {
-          var $doc = $('.doc');
-          $doc.html('');
-          var index = streams.home.length - 1;
-          var noOfTweets = 0;
-
-          while(noOfTweets < 20 && index >= 0){
-            var tweet = streams.home[index];
-            var $tweet = $('<div class="tweet"></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message);
-            $tweet.appendTo($doc);
-
-            var tweetTime = tweet.created_at;
-            var $tweetTime = $('<div class="time"></div>');
-            $tweetTime.text('Sent: ' + tweetTime);
-            $tweetTime.appendTo($doc);
-
-            index -= 1;
-            noOfTweets ++;
-          }
-        }
-
-        refreshTweets();
-        setInterval(refreshTweets, 1000);
-      });
-
-    </script>
+    </section>
+    <img src="http://img.pandawhale.com/65458-go-on-without-me-pug-puppy-gif-uVjM.gif"/>
+    <div class="colorBox box1"></div>
+    <div class="colorBox box2"></div>
+    <div class="colorBox box3"></div>
+    <div class="colorBox box4"></div>
+    <section class="doc"></section>
   </body>
 </html>
