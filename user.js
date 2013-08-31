@@ -3,11 +3,11 @@ function refreshTweets() {
   var $doc = $('.doc');
   $doc.html('');
   $doc.append("<p class='heading'>Welcome to Twittler</p>");
-  var index = streams.home.length - 1;
+  var index = streams.users.shawndrost.length - 1;
   var noOfTweets = 0;
 
   while(noOfTweets < 10 && index >= 0){
-    var tweet = streams.home[index];
+    var tweet = streams.users.shawndrost[index];
     var $tweet = $('<div class="tweet"></div>');
     $tweet.append('<a href="' + tweet.user + '.html">' + '@' + tweet.user + '</a>: ' + tweet.message);
     $tweet.appendTo($doc);
