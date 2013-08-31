@@ -14,7 +14,7 @@ function refreshTweets() {
 
     var tweetTime = tweet.created_at;
     var $tweetTime = $('<div class="time"></div>');
-    $tweetTime.text('Sent: ' + tweetTime);
+    $tweetTime.text('Sent ' + tweetTime.toLocaleTimeString() + " on " + tweetTime.toLocaleDateString());
     $tweetTime.appendTo($tweet);
 
     index -= 1;
